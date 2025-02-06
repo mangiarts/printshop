@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mangi Arts Print Shop</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            color: #333;
+            overflow-x: hidden;
+        }
+        h1, h2, h3 {
+            font-family: 'Akira', sans-serif;
+            color: #FF6F00; /* Orange */
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        button {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FF6F00;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to right, #000, #FF6F00);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        .hero button {
+            font-size: 1.2rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* About Section */
+        .about {
+            padding: 50px;
+            background-color: #F5F5F5;
+            text-align: center;
+        }
+        .about p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        .about img {
+            margin-top: 20px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #FF6F00;
+        }
+
+        /* Featured Services */
+        .services {
+            display: flex;
+            justify-content: space-around;
+            background: #000;
+            padding: 50px 20px;
+            color: #fff;
+        }
+        .service {
+            text-align: center;
+            width: 30%;
+            transition: transform 0.3s ease;
+        }
+        .service:hover {
+            transform: scale(1.1);
+        }
+        .service h3 {
+            margin-bottom: 15px;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 50px;
+            text-align: center;
+        }
+        .portfolio .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .portfolio img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .portfolio img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #FF6F00;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+        .contact button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div>
+            <h1>Welcome to Mangi Arts Print Shop</h1>
+            <button>Explore Our Services</button>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="about">
+        <h2>About Us</h2>
+        <p>Mangi Arts Print Shop is your go-to destination for custom clothing printing, stunning graphic designs, and high-quality motion graphics. Let us bring your vision to life!</p>
+        <img src="mangi_ceo.jpg" alt="David Mangi - CEO">
+        <p><strong>David Mangi</strong><br>Founder & CEO</p>
+    </div>
+
+    <!-- Featured Services -->
+    <div class="services">
+        <div class="service">
+            <h3>Clothing Printing</h3>
+            <p>Custom t-shirts, hoodies, and more.</p>
+        </div>
+        <div class="service">
+            <h3>Graphic Design</h3>
+            <p>Logos, posters, and digital artwork.</p>
+        </div>
+        <div class="service">
+            <h3>Motion Graphics</h3>
+            <p>Animations that tell your story.</p>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div class="portfolio">
+        <h2>Our Portfolio</h2>
+        <div class="grid">
+            <img src="placeholder.jpg" alt="Design Sample">
+            <img src="placeholder.jpg" alt="Motion Graphics Sample">
+            <img src="placeholder.jpg" alt="Clothing Sample">
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact">
+        <h2>Get in Touch</h2>
+        <p>Have a project in mind? Let's make it happen!</p>
+        <button>Contact Us</button>
+    </div>
+
+</body>
+</html>

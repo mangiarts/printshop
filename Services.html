@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Mangi Arts Print Shop</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            color: #FF6F00;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #000;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            font-family: 'Montserrat', sans-serif;
+            color: #FF6F00;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        h2 {
+            font-family: 'Akira', sans-serif;
+            color: #FF6F00;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+            background: #000;
+        }
+
+        .service-card {
+            background: #fff;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(255, 111, 0, 0.5);
+        }
+
+        .service-card img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-family: 'Akira', sans-serif;
+            color: #FF6F00;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .service-card a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background-color: #FF6F00;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .service-card a:hover {
+            background: #cc5700;
+        }
+
+        .testimonials {
+            background: #fff;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .testimonial {
+            max-width: 600px;
+            margin: auto;
+            font-style: italic;
+            color: #333;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .cta a {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FF6F00;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .cta a:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+    <h2>Our Services</h2>
+    <div class="services-container">
+        <div class="service-card">
+            <img src="designs/IMG-20250206-WA0037.jpg" alt="Clothing Printing">
+            <h3>Clothing Printing</h3>
+            <p>Custom t-shirts, hoodies, and more with high-quality prints.</p>
+            <a href="portfolio.html#gallery">Learn More</a>
+
+        </div>
+        <div class="service-card">
+            <img src="mangi_logo.jpg" alt="Graphic Design">
+            <h3>Graphic Design</h3>
+            <p>Unique logos, posters, and digital artwork tailored to your brand.</p>
+            <a href="portfolio.html">Learn More</a>
+
+        </div>
+        <div class="service-card">
+            <img src="designs/IMG-20250206-WA0036.jpg" alt="Motion Graphics">
+            <h3>Motion Graphics</h3>
+            <p>Engaging animations that bring your ideas to life.</p>
+            <a href="portfolio.html">Learn More</a>
+        </div>
+    </div>
+
+    <div class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <p class="testimonial">"Mangi Arts Print Shop transformed our brand with stunning designs and top-notch printing quality!" – Happy Customer</p>
+    </div>
+
+    <div class="cta">
+        <a href="contact.html">Get in Touch</a>
+    </div>
+</body>
+</html>

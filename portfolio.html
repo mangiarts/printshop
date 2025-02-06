@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mangi Arts Print Shop</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #000;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            font-family: 'Montserrat', sans-serif;
+            color: #FF6F00;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        h2 {
+            font-family: 'Akira', sans-serif;
+            color: #FF6F00;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('hero-image.jpg'); /* Add a relevant background image */
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .hero-content {
+            background: rgba(0, 0, 0, 0.856); /* Semi-transparent overlay */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        /* Cards Section */
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 50px 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .card {
+            width: 250px;
+            height: 150px;
+            background: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background 0.3s ease;
+            padding: 20px;
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            margin: 10px 0 0;
+            font-size: 1rem;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background: #FF6F00;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .testimonial-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .testimonial {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        /* Call-to-Action Section */
+        .cta {
+            background-color: #FF6F00;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .cta-button {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links a {
+            color: #FF6F00;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .social-links a:hover {
+            color: #fff;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox video {
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+
+        .lightbox .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Mangi Arts Print Shop</h1>
+            <p>Your one-stop destination for creative print solutions.</p>
+        </div>
+    </section> -->
+
+    <!-- Portfolio Section -->
+    <h2>Our Portfolio</h2>
+    <div class="cards-container">
+        <div class="card" onclick="openPDF()">
+            <h3>Portfolio</h3>
+            <p>View our latest projects and designs.</p>
+        </div>
+        <div class="card" onclick="openVideo()">
+            <h3>Showreel</h3>
+            <p>Watch our creative process in action.</p>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2>Our Work</h2>
+        <div class="gallery-grid">
+            <!-- <img src="designs/IMG-20250206-WA0002.jpg" alt="Project 1"> -->
+            <img src="designs/IMG-20250206-WA0033.jpg" alt="Project 2">
+            <!-- <img src="designs/IMG-20250206-WA0034.jpg" alt="Project 3"> -->
+            <img src="designs/IMG-20250206-WA0035.jpg" alt="Project 4">
+            <img src="designs/IMG-20250206-WA0036.jpg" alt="Project 5">
+            <img src="designs/IMG-20250206-WA0037.jpg" alt="Project 6">
+            <img src="designs/IMG-20250206-WA0038.jpg" alt="Project 7">
+            <img src="designs/IMG-20250206-WA0039.jpg" alt="Project 8">
+            <img src="designs/IMG-20250206-WA0040.jpg" alt="Project 9">
+            <img src="designs/IMG-20250206-WA0041.jpg" alt="Project 10">
+            <img src="designs/IMG-20250206-WA0042.jpg" alt="Project 11">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial">
+                <p>"Amazing work! Highly recommend Mangi Arts for their creativity and professionalism."</p>
+                <p>- VinAnimator</p>
+            </div>
+            <div class="testimonial">
+                <p>"The quality of their prints is outstanding. Will definitely work with them again!"</p>
+                <p>- Main Mamaa</p>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="cta">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Contact us today to bring your ideas to life!</p>
+        <a href="contact.html" class="cta-button">Get in Touch</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Mangi Arts Print Shop. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61572471193874">Facebook</a>
+                <a href="https://www.instagram.com/mangiarts__printshop">Instagram</a>
+                <!-- <a href="#">Twitter</a> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox for Video -->
+    <div class="lightbox" id="videoLightbox">
+        <span class="close" onclick="closeVideo()">&times;</span>
+        <video controls>
+            <source src="showreel.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script>
+        function openPDF() {
+            window.open("portfolio new_compressed.pdf", "_blank");
+        }
+
+        function openVideo() {
+            document.getElementById("videoLightbox").style.display = "flex";
+        }
+
+        function closeVideo() {
+            document.getElementById("videoLightbox").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
