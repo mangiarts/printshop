@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mangi Arts Print Shop</title>
+    <meta name="description" content="Mangi Arts Print Shop offers premium graphic design, motion graphics, and custom printing services.">
+    <meta name="keywords" content="graphic design, print shop, custom printing, motion graphics, logo design">
+    <meta name="author" content="David Mangi">
+
     <style>
         /* General Styles */
         body {
@@ -204,16 +208,116 @@
         }
 
         /* Contact Section */
-        .contact {
-            background: #000000;
-            color: #fff;
-            text-align: center;
-            padding: 50px;
-        }
+        .contact-info {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+    }
 
-        .contact button {
-            margin-top: 20px;
-        }
+    .contact-info h2 {
+      font-family: 'Brasika', serif;
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      margin: 0 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover img {
+      transform: scale(1.1);
+    }
+
+    .contact-form {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.589);
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form h2 {
+      font-family: 'Brasika', serif;
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      font-size: 16px;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #FF8C00;
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 14px;
+      background-color: #FF8C00;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #e07b00;
+      /* Darker amber */
+    }
+    footer {
+      text-align: center;
+      background-color: black;
+      color: white;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    footer p {
+      font-size: 16px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    footer a:hover {
+      color: #FF8C00;
+    }
     </style>
 </head>
 
@@ -267,13 +371,79 @@
 
     <!-- Contact Section -->
     <div class="contact">
-        <h2>Get in Touch</h2>
-        <p>Have a project in mind? Let's make it happen!</p>
-        <a href="contact.html">
-            <button class="contact-button">Contact Us</button>
-        </a>
+        
+        <section id="contact-card"class="contact-card">
+            
+            <h2>Contact Details</h2>
+            <div class="card">
+              <p><strong>Phone:</strong> <a href="https://wa.me/254794888191" target="_blank">+254 794 888191</a></p>
+              <p><strong>Email:</strong> <a href="mailto:dmangi610@gmail.com" target="_blank">dmangi610@gmail.com</a></p>
+              <p><strong>Address:</strong> Nairobi, Kenya</p>
+              <p><strong>Follow us:</strong></p>
+              <div class="social-icons">
+                <a href="#" title="Facebook"><img src="icons/facebook.png" alt="Facebook"></a>
+                <a href="#" title="Tiktok"><img src="icons/Tiktok.png" alt="Tiktok"></a>
+                <a href="#" title="Instagram"><img src="icons/instagram.png" alt="Instagram"></a>
+              </div>
+            </div>
+            <h2>Get in Touch</h2>
+            <p>Have a project in mind? Let's make it happen!</p>
+          </section>
+          <style>
+            .contact-card {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+              margin-top: 50px;
+            }
+          
+            .card {
+              background: rgb(226, 224, 224);
+              padding: 20px;
+              border-radius: 8px;
+              box-shadow: 0 10px 30px rgba(240, 115, 57, 0.1);
+              max-width: 400px;
+              width: 90%;
+            }
+          
+            .card a {
+              color: #FF8C00;
+              text-decoration: none;
+              font-weight: bold;
+            }
+          
+            .card a:hover {
+              color: #e07b00;
+            }
+          
+            .social-icons {
+              display: flex;
+              justify-content: center;
+              margin-top: 10px;
+            }
+          
+            .social-icons a {
+              margin: 0 10px;
+              transition: transform 0.3s ease;
+            }
+          
+            .social-icons a img {
+              width: 30px;
+              height: 30px;
+              transition: transform 0.3s ease;
+            }
+          
+            .social-icons a:hover img {
+              transform: scale(1.1);
+            }
+          </style>
 
     </div>
+    <footer>
+        <p>Active 24/7 - We're always here to assist you!</p>
+        <a href="">Contact Us</a>
+      </footer>
 
 </body>
 
